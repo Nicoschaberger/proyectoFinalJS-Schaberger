@@ -40,7 +40,6 @@ function botonera() {
         boton.addEventListener("click", () => {
           div.innerHTML = "";
           let galeria = productos.filter( (producto) => producto.categoria == boton.id);
-          renederProductos(galeria);
         });
       }
 }
