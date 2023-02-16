@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital@1&display=swap');
+
+/* reset */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+body{
+    background-color: whitesmoke;
+}
+
+.title{
+    text-align: center;
+    padding: 1rem;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.botonProductos{
+    border: 1px solid black;
+    border-radius: 1rem;
+    margin: 1rem;
+    width: 10%;
+    text-align: center;
+    box-shadow: 4px 4px 5px 5px rgb(169, 169, 230);
+}
+
+
+
+
+
+
