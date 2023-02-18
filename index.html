@@ -7,13 +7,14 @@
     <!-- css -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.2/dist/sweetalert2.min.css">
     
     <title>Proyecto Final Schaberger</title>
 </head>
 <body>
     <div id="menu-contenedor">
         <nav class="menu">
-          <h1 class="menu-logo">Shop.</h1>
+          <h1 class="menu-logo">Kiosco Java</h1>
           <h1 class="ver-carrito" id="verCarrito">🛒<span id="cantidadCarrito" class="cantidad-carrito"></span></h1>
           <div class="styleCart">Carrito
               <ul id="carrito">    
@@ -26,8 +27,17 @@
       <main>
         <div id="btnProductos" class="botones"></div>
         <div id="carro-contenedor" class="carro"></div>
+        <div id="lista-usuarios" class="user"> <strong>Nuestros proveedores son:</strong>  <br></div>
       </main>
 
+      <footer class="Final">
+        <h3>TODOS LOS DERECHOS RESERVADOS</h3>
+      </footer>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/proveedores.js"></script>
+    <script src="js/libreria.js"></script>    
     <script src="js/productos.js"></script>
     <script src="js/main.js"></script>
 </body>

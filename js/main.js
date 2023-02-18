@@ -3,21 +3,19 @@ const btnProductos = document.querySelector("#btnProductos");
 const carroContenedor = document.querySelector("#carro-contenedor")
 const cantidadCarrito = document.querySelector("#cantidadCarrito");
 
-
 let carrito =[];
 function init(){
     titulo()
     mostrarMenu()
     botonera()
-    agregarAlCarrito()
-    mostrarCarrito()
+    agregarAlCarrito()    
     recuperar()
 }
 
 function titulo() {
     const titulo = document.createElement("h1");
     titulo.setAttribute("class", "title");
-    titulo.innerHTML = "kiosco Java";
+    titulo.innerHTML = "Nuestros productos son:";
     menuContenedor.appendChild(titulo)
   }
   
@@ -30,28 +28,35 @@ function titulo() {
           <img src="${producto.img}">
           <h2>${producto.nombre}</h2>
           <p class="price">${producto.precio} $</p>
+          <button class="btncompra">Comprar</button>
           `;  
           btnProductos.appendChild(btn);
       });
   }
 
-  function botonera(){
-    let botones = document.getElementsByClassName("botonProductos");
+  function botonera() {
+    let div = document.createElement("div");
+    btnProductos.appendChild(div);
+    let div2 = document.createElement("div");
+    div2.setAttribute("id", "elementos");
+    btnProductos.appendChild(div2);
+    let botones = document.getElementsByClassName("btnProductos");
 
-    for (btn of botones) {
-      btn.addEventListener("click", () =>{
-        let prod = productos.filter ((producto) => producto.id === btn.id)
+    for (const boton of botones) {
+      boton.addEventListener("click", () => {
+        div.innerHTML = "";
+        let galeria = productos.filter( (producto) => producto.id == boton.id);
       });
     }
   }
     
   function agregarAlCarrito(){
-    let btnadd = document.getElementsByClassName("botonProductos");
-      for (const botones of btnadd) {
+    let btnadd = document.getElementsByClassName("btnProductos");
+      for (const boton of btnadd) {
         botones.addEventListener('click',()=>{
-          let producto = producto.find((item) => item.id == botones.id);
+          let producto = producto.find((producto) => producto.nombre == boton.nombre);
             carrito.push(producto);
-            mostrarCarrito(producto);
+            mostrarCarrito();
             totalCarrito()
             localStorage.setItem('carrito', JSON.stringify(carrito))
         });          
@@ -64,7 +69,7 @@ function titulo() {
   }
   
   function mostrarCarrito(){
-      const carrito = document.getElementById('carrito')
+    const carrito = document.getElementById('carrito')
     let li = document.createElement('li')
     li.innerHTML += `${producto.nombre} ${producto.precio}`
     carrito.appendChild(li)
@@ -85,8 +90,9 @@ function titulo() {
       localStorage.setItem("carrito", JSON.stringify(carrito));
     };
 
-init();
 
+    init();
+  
 
 
 

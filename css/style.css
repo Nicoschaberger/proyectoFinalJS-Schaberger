@@ -18,8 +18,15 @@ body{
     padding: 1rem;
 }
 
-ul{
+.proveedores{
     list-style: none;
+    text-align: center;
+    font-weight: bold;
+    margin: 1.5rem;
+}
+
+.user{
+    text-align: center;
 }
 
 a{
@@ -30,17 +37,40 @@ a{
     border: 1px solid black;
     border-radius: 1rem;
     margin: 1rem;
+    padding: 1rem;
     width: 10%;
     text-align: center;
     box-shadow: 4px 4px 5px 5px rgb(169, 169, 230);
+}
+
+.botones{
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+    margin-left: 14%;
 }
 
 img{
     width: 5rem;
 }
 
+.user{
+    margin: 5%;
+}
 
+footer{
+    background-color: darkgray;
+    text-align: center;
+    padding: 3%;
+}
 
+.menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: darkgrey;
+    padding: 2%;
+}
 
 
 
