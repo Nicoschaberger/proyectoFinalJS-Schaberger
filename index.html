@@ -11,14 +11,25 @@
     <title>Proyecto Final Schaberger</title>
 </head>
 <body>
-    <div class="styleCart">Carrito
-        <ul id="carrito">
+    <div id="menu-contenedor">
+        <nav class="menu">
+          <h1 class="menu-logo">Shop.</h1>
+          <h1 class="ver-carrito" id="verCarrito">🛒<span id="cantidadCarrito" class="cantidad-carrito"></span></h1>
+          <div class="styleCart">Carrito
+              <ul id="carrito">    
+              </ul>
+              total:$<span id="total">0</span>
+          </div>
+        </nav>
+      </div>
 
-        </ul>
-        total:$<span id="total">0</span>
-    </div>
+      <main>
+        <div id="btnProductos" class="botones"></div>
+        <div id="carro-contenedor" class="carro"></div>
+      </main>
 
-    <script src="js/carrito.js"></script>
+    <script src="js/productos.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
+   
