@@ -45,6 +45,7 @@ a{
     box-shadow: 4px 4px 5px 5px rgb(169, 169, 230);
 }
 
+
 .botones{
     display: flex;
     justify-content: space-around;
@@ -75,13 +76,39 @@ footer{
 
 .vacio{
     background-color: darkgrey;
-    border: darkgrey;
+    padding: 0.6rem;
+    border: black 1px solid;
+    border-radius: 60%;
     font-weight: bold;
+    box-shadow: 2px 2px 3px 3px whitesmoke;
+}
+
+.vacio:hover{
+    transform: scale(0.8);
 }
 
 .btnCompras{
     background-color: darkgrey;
-    border: darkgrey;
+    padding: 0.6rem;
+    border: black 1px solid;
+    border-radius: 60%;
+    font-weight: bold;
+    box-shadow: 2px 2px 3px 3px whitesmoke;
+}
+
+.btnCompras:hover{
+    transform: scale(0.8);
+}
+
+.btnCompra{
+    padding: 0.2rem;
     font-weight: bold;
 }
 
+.btnCompra:hover{
+    transform: scale(0.8);
+}
+
+.price{
+    padding: 0.5rem;
+}

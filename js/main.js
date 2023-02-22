@@ -4,7 +4,7 @@ const carroContenedor = document.querySelector("#carro-contenedor")
 const cantidadCarrito = document.querySelector("#cantidadCarrito");
 const carritoCompra = document.querySelector("#carrito-compra");
 const elimino = document.getElementById("vaciarCarrito");
-const compraAhora = document.querySelector("#compraAhora")
+const compraAhora = document.querySelector("#compraAhora");
 
 
 let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
@@ -12,7 +12,7 @@ let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 function init(){
     titulo();
     mostrarMenu();
-    confirmarCompra();
+    
 }
 
 function titulo() {
@@ -76,6 +76,7 @@ function titulo() {
         carritoProd.appendChild(li);  
       })
       eliminar(carrito);
+      confirmar(carrito);
     }
     
       
@@ -83,18 +84,19 @@ function titulo() {
       elimino.addEventListener('click', () => {
       carrito.splice(0, carrito.length);
       mostrarCarrito(carrito);
+      totalCarrito();
       localStorage.clear()
       });
     }
         
+  function confirmar(carrito){
+    compraAhora.addEventListener('click', () => {
+      carrito.splice(0, carrito.length);
+      mostrarCarrito(carrito);
+      totalCarrito();
+    })
     
-    function confirmarCompra(){
-      let carrito = document.getElementById("carritoCompra");
-      for (e of carrito){
-        e.clear();
-      }
-     
-    } 
+  }
         
     
 
