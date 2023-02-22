@@ -12,7 +12,7 @@ let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 function init(){
     titulo();
     mostrarMenu();
-    compra(carrito);
+    confirmarCompra();
 }
 
 function titulo() {
@@ -83,16 +83,20 @@ function titulo() {
       elimino.addEventListener('click', () => {
       carrito.splice(0, carrito.length);
       mostrarCarrito(carrito);
+      localStorage.clear()
       });
     }
         
     
-    function compra(carrito) {
-      compraAhora.addEventListener("click", () => {
-        carrito.length = 0;
-        localStorage.setItem("carrito", JSON.stringify(carrito))
-      });
-    };
+    function confirmarCompra(){
+      let carrito = document.getElementById("carritoCompra");
+      for (e of carrito){
+        e.clear();
+      }
+     
+    } 
+        
+    
 
 
   init()
